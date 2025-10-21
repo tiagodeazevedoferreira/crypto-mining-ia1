@@ -1,0 +1,14 @@
+python
+     import os
+     import time
+     import subprocess
+
+     def mine_crypto():
+         # Comando para iniciar a mineração (exemplo para minerar Monero com XMRig)
+         command = "xmrig --donate-level=1 --url=pool.supportxmr.com:3333 --user=YOUR_WALLET_ADDRESS --pass=x"
+         subprocess.run(command, shell=True)
+
+     if __name__ == "__main__":
+         while True:
+             mine_crypto()
+             time.sleep(60)  # Espera 1 minuto antes de verificar novamente
